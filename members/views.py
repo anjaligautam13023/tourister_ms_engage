@@ -40,7 +40,7 @@ def about(request):
 
 #function called at index page
 def index(request):
-  template = loader.get_template('html\index.html')
+  template = loader.get_template('html/index.html')
   #get user name from session
   user_name = request.session.get("user_name",None)
   #get user id from session 
