@@ -22,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
-
+# SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = "django-insecure-x2rid!mgc^u_w%=w4$%b^%ly@67$p&o4e8vkjk^&q+wszxof1#"
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["tourister-msengage.herokuapp.com","localhost"]
 
@@ -88,30 +88,30 @@ WSGI_APPLICATION = 'rec.wsgi.application'
 #     }
 # }
 
-# DATABASES = {  
-#     'default': {  
-#         'ENGINE': 'django.db.backends.mysql',  
-#         'NAME': 'engage',  
-#         'USER': 'root',  
-#         'PASSWORD': 'root',  
-#         'HOST': '127.0.0.1',  
-#         'PORT': '3306',  
-#         'OPTIONS': {  
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
-#         }  
-#     }  
-# }  
-
 DATABASES = {  
     'default': {  
-        'ENGINE': 'django.db.backends.postgresql',  
-        'NAME': os.environ['DATABASE'],  
-        'USER': os.environ['DB_USER'],  
-        'PASSWORD': os.environ['DB_PASSWORD'],  
-        'HOST': os.environ['DB_HOST'],  
-        'PORT': os.environ['DB_PORT']
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'engage',  
+        'USER': 'root',  
+        'PASSWORD': 'root',  
+        'HOST': '127.0.0.1',  
+        'PORT': '3306',  
+        'OPTIONS': {  
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+        }  
     }  
 }  
+
+# DATABASES = {  
+#     'default': {  
+#         'ENGINE': 'django.db.backends.postgresql',  
+#         'NAME': os.environ['DATABASE'],  
+#         'USER': os.environ['DB_USER'],  
+#         'PASSWORD': os.environ['DB_PASSWORD'],  
+#         'HOST': os.environ['DB_HOST'],  
+#         'PORT': os.environ['DB_PORT']
+#     }  
+# }  
 
 
 # Password validation
@@ -152,9 +152,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
-# STATICFILES_DIRS=[
-#     os.path.join(BASE_DIR,'members/statics')
-# ]
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,'members/statics')
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

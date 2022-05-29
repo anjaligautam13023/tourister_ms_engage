@@ -179,7 +179,15 @@
         <div class="row align-items-center">
           <div class="col-md-6 py-3">
 
-            <h2 class="title-section" style="color:#293462; padding-left: 50 px;">Similar people also likes</h2>
+            <h2 id="popular" class="title-section" style="color:#293462; padding-left: 50 px;">Similar people also likes</h2>
+            <script>
+                if ("{{user_name}}" == "None") {
+        document.getElementById("popular").innerHTML = "popular places";
+       
+      }
+     
+
+            </script>
           </div>
 
         </div>

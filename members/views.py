@@ -52,7 +52,13 @@ def index(request):
   if user_name is None:
     popularItem=popular_item()
   else: 
-    popularItem=collaborative_item(id)
+    
+    try:
+      user=Activity.objects.get(id=id,name=user_name)
+      popularItem=collaborative_item(id)
+    except Activity.DoesNotExist:
+      popularItem=popular_item()
+    
 
   context = {'recommend': list,
               'random':randomItem,
