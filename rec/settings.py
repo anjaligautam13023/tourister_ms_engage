@@ -109,10 +109,7 @@ DATABASES = {
         'USER': os.environ['DB_USER'],  
         'PASSWORD': os.environ['DB_PASSWORD'],  
         'HOST': os.environ['DB_HOST'],  
-        'PORT': os.environ['DB_PORT'],  
-        'OPTIONS': {  
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
-        }  
+        'PORT': os.environ['DB_PORT']
     }  
 }  
 
