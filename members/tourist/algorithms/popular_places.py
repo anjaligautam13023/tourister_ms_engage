@@ -7,9 +7,9 @@ import pandas as pd
 from members.models import Activity
 
 #load dataset
-bhutan=pd.read_csv('members\\tourist\\datasets\\bhutan.csv')
-indonesia=pd.read_csv("members\\tourist\\datasets\\indonesia.csv")
-india=pd.read_csv('members\\tourist\\datasets\\india_places.csv')
+bhutan=pd.read_csv("members/tourist/datasets/bhutan.csv")
+india=pd.read_csv('members/tourist/datasets/india_places.csv')
+indonesia=pd.read_csv('members/tourist/datasets/indonesia.csv')
 df = pd.concat([india,bhutan,indonesia],ignore_index = True)
 
 #load user activities from database

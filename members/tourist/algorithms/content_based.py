@@ -6,9 +6,9 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 #load dataset
-bhutan=pd.read_csv("members\\tourist\\datasets\\bhutan.csv")
-india=pd.read_csv('members\\tourist\\datasets\\india_places.csv')
-indonesia=pd.read_csv('members\\tourist\\datasets\\indonesia.csv')
+bhutan=pd.read_csv("members/tourist/datasets/bhutan.csv")
+india=pd.read_csv('members/tourist/datasets/india_places.csv')
+indonesia=pd.read_csv('members/tourist/datasets/indonesia.csv')
 
 #merg three countries
 df = pd.concat([india,bhutan,indonesia],ignore_index = True)

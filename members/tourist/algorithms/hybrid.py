@@ -9,9 +9,9 @@ from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import TruncatedSVD
 
-bhutan=pd.read_csv("members\\tourist\\datasets\\bhutan.csv")
-india=pd.read_csv('members\\tourist\\datasets\\india_places.csv')
-indonesia=pd.read_csv('members\\tourist\\datasets\\indonesia.csv')
+bhutan=pd.read_csv("members/tourist/datasets/bhutan.csv")
+india=pd.read_csv('members/tourist/datasets/india_places.csv')
+indonesia=pd.read_csv('members/tourist/datasets/indonesia.csv')
 
 #merging three dataset 
 df = pd.concat([india,bhutan,indonesia],ignore_index = True)
