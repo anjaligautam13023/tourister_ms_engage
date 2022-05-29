@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon"
+    href="https://www.freeiconspng.com/thumbs/travel-icon-png/plane-travel-flight-tourism-travel-icon-png-10.png">
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="copyright" content="MACode ID, https://macodeid.com/">
+
+  <title>tourister</title>
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/maicons.css' %}">
+
+  <link rel="stylesheet" href="{% static 'vendor/animate/animate.css' %}">
+
+  <link rel="stylesheet" href="{% static 'vendor/owl-carousel/css/owl.carousel.css' %}">
+
+  <link rel="stylesheet" href="{% static 'vendor/fancybox/css/jquery.fancybox.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/theme.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <h3 style="padding-left:100px ;">Tour<span class="fg-primary">ister.</span></h3>
+    <div class="container">
+
+      <a href="index.html" class="navbar-brand"><span class="text-primary"></span></a>
+
+
+
+      <script type="text/javascript">
+
+        $(document).on('submit', '#search_box', function (e) {
+          e.preventDefault();
+          window.location.href = "/page?place=" + $("#search").val();
+
+        });
+
+      </script>
+
+
+      <h4 id="demo" style="padding-left: 8cm;font-family: cursive;color:#e63f0d;"></h4>
+
+      <script>
+        if ("{{user_name}}" != "None") {
+          document.getElementById("demo").innerHTML = "Hi , {{user_name}}";
+
+        }
+
+      </script>
+
+
+
+      <div class="navbar-collapse collapse" id="navbarContent">
+        <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
+          <li class="nav-item active">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about" class="nav-link">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#footer" class="nav-link">Contact</a>
+          </li>
+          <li>
+            <div class="social-mini-button">
+
+
+
+              <a href="signup" id="signup"><span style="font-size: medium;">signup</span></a>
+              <a href="login" id="login"><span style="font-size: medium;">login</span></a>
+
+              <a href="logout" id="logout"><span style="font-size: medium;">logout</span></a>
+          </li>
+
+      </div>
+    </div>
+
+    </ul>
+    </div>
+
+    <script>
+      if ("{{user_name}}" != "None") {
+        document.getElementById("signup").innerHTML = "";
+        document.getElementById("login").innerHTML = "";
+      }
+      if ("{{user_name}}" == "None") {
+        document.getElementById("logout").innerHTML = "";
+
+      }
+
+    </script>
+
+
+    </div> <!-- .container -->
+  </nav> <!-- .navbar -->
+
+  <div class="page-banner bg-img bg-img-parallax overlay-dark"
+    style="background-image: url(https://previews.123rf.com/images/artnovielysa/artnovielysa1610/artnovielysa161000038/67994336-illustration-of-travel-and-tourism-with-airplane-on-orange-background.jpg);">
+    <div class="container h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-lg-8">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">About</li>
+            </ol>
+          </nav>
+          <h1 class="fg-white text-center">About</h1>
+        </div>
+      </div>
+    </div>
+  </div> <!-- .page-banner -->
+  </header>
+
+  <main>
+
+
+    <div class="page-section">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="title-section">Tourism and Travel</h2>
+          <div class="subhead" style="color: rgb(233, 102, 55);">
+            <ul>
+              <p>we helps to get you know about similar places by using our wonderful recommendation system</p>
+              <p>we offers you best packages to visit places</p>
+              <p>Our facilities are same as given in our package</p>
+              <p>we are available 24/7 to make your tourism experience memorable</p>
+            </ul>
+          </div>
+          <h3 style="color: firebrick;">we are here to make your vacations wonderful</h3>
+        </div>
+      </div> <!-- .container -->
+    </div> <!-- .page-section -->
+
+  </main>
+
+  <footer class="page-footer" id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 py-3">
+          <h3>Tour<span class="fg-primary">ister.</span></h3>
+        </div>
+        <div class="col-lg-3 py-3">
+          <h5>Contact Information</h5>
+          <p>Mathura uttar pradesh India</p>
+          <p>Email: anjaligautam13023@mail.com</p>
+          <p>Phone: +91 9634553148</p>
+        </div>
+        <div class="col-lg-3 py-3">
+          <h5>My portfolio</h5>
+          <ul class="footer-menu">
+            <li><a href="https://anjaligautam13023.github.io/portfolio/">portfolio</a></li>
+            <li><a href="https://www.linkedin.com/in/anjaligautam1/">linked in</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 py-3">
+          <h5>Feedback</h5>
+          <form action="#">
+            <input type="text" class="form-control" placeholder="feedback">
+            <button type="submit" class="btn btn-primary btn-sm mt-2">Submit</button>
+          </form>
+        </div>
+      </div>
+      <hr>
+     </div>
+  </footer>
+
+
+
+  <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+  <script src="{% static 'vendor/owl-carousel/js/owl.carousel.min.js' %}"></script>
+
+  <script src="{% static 'vendor/wow/wow.min.js' %}"></script>
+
+  <script src="{% static 'vendor/fancybox/js/jquery.fancybox.min.js' %}"></script>
+
+  <script src="{% static 'vendor/isotope/isotope.pkgd.min.js' %}"></script>
+
+  <script src="{% static 'js/google-maps.js' %}"></script>
+
+  <script src="{% static 'js/theme.js'%}"></script>
+
+</body>
+
+</html>
