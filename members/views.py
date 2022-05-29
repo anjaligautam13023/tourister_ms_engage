@@ -23,13 +23,13 @@ def logout(request):
   #user name and id is set to null
   user= request.session['user_name'] = None
   request.session['user_id'] = None
-  template = loader.get_template('html\logout.html')  
+  template = loader.get_template('html/logout.html')  
   return HttpResponse(template.render())
 
 
 #function called at about 
 def about(request):
-  template = loader.get_template('html\\about.html')  
+  template = loader.get_template('html/about.html')  
   user_name = request.session.get("user_name",None)
   #pssing user name to about page
   context = {
@@ -112,7 +112,7 @@ def page(request):
         user = Activity(name = user_name,item=place,user_id=id,clicks=1,rate=0)
         user.save()
     
-    template = loader.get_template('html\page.html')
+    template = loader.get_template('html/page.html')
     recommend_image = recomend_item(rc)
     
 
@@ -147,7 +147,7 @@ def login(request):
       pass
 
   else:
-    template = loader.get_template('html\login.html')
+    template = loader.get_template('html/login.html')
     return HttpResponse(template.render())  
 
 #function to call at signup
@@ -160,5 +160,5 @@ def signup(request):
         #save user data to database
         user = User(name = name,email = email,password=password)
         user.save()
-    template = loader.get_template('html\signup.html')
+    template = loader.get_template('html/signup.html')
     return HttpResponse(template.render())
