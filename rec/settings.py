@@ -88,14 +88,28 @@ WSGI_APPLICATION = 'rec.wsgi.application'
 #     }
 # }
 
+# DATABASES = {  
+#     'default': {  
+#         'ENGINE': 'django.db.backends.mysql',  
+#         'NAME': 'engage',  
+#         'USER': 'root',  
+#         'PASSWORD': 'root',  
+#         'HOST': '127.0.0.1',  
+#         'PORT': '3306',  
+#         'OPTIONS': {  
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+#         }  
+#     }  
+# }  
+
 DATABASES = {  
     'default': {  
-        'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'engage',  
-        'USER': 'root',  
-        'PASSWORD': 'root',  
-        'HOST': '127.0.0.1',  
-        'PORT': '3306',  
+        'ENGINE': 'django.db.backends.postgresql',  
+        'NAME': os.environ['DATABASE'],  
+        'USER': os.environ['DB_USER'],  
+        'PASSWORD': os.environ['DB_PASSWORD'],  
+        'HOST': os.environ['DB_HOST'],  
+        'PORT': os.environ['DB_PORT'],  
         'OPTIONS': {  
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
         }  
