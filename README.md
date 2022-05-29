@@ -8,7 +8,8 @@ To recommend user places based on content based, collaborative based and hybrid 
 # Project Overview:
 I have used 4 algoriths in this project
 - when user is not logged in<br />
-   1.To show popular places average weighted score is used
+   1.To show popular places average weighted score is used<br />
+
    ![msengage7](https://user-images.githubusercontent.com/91557659/170885598-1a8dbfe2-2668-4916-a3a3-99940978cc7d.PNG)
 
 - when user is logged in<br />
